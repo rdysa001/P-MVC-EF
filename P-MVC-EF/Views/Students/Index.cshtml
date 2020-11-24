@@ -8,17 +8,17 @@
 
 
 
-<div class="container">
-    <div class="col-3">
+
+    <div class="card-columns">
         @foreach (var item in Model)
         {
-            <div class="card" style="width:auto;">
-                <h5 class="card-title">@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</h5>
+            <div class="card" style="width:200px; height:200px">
+                <h4 class="card-title">@Html.DisplayFor(modelItem => item.FirstName) @Html.DisplayFor(modelItem => item.LastName)</h4>
                 <h6 class="card-subtitle">@Html.DisplayFor(modelItem => item.FavoriteColor)</h6>
                 @Html.ActionLink("Details", "Details", new { id = item.StudentID })
             </div>
         }
     </div>
-</div>
+
 
 
